@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>atriの画廊3</title>
+      <link href="/2024/05/28/8/"/>
+      <url>/2024/05/28/8/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://img2.imgtp.com/2024/05/02/W12BqE0D.png" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/KgiOMWaR.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/OC4FhXkU.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/yD91nRIc.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/eVxPPqac.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/zHB2BA6L.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/0yv8m7Fq.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/E4NIHEAZ.jpg" alt=""><br><img src="https://img2.imgtp.com/2024/05/28/nJZdc7TQ.jpg" alt=""></p><h2 id="好多天没更新了，这次很有可能是最后一次内容更新了，因为太少亚托莉的美图了，什么？涩涩？不可能的，永远不可能的-（笑）"><a href="#好多天没更新了，这次很有可能是最后一次内容更新了，因为太少亚托莉的美图了，什么？涩涩？不可能的，永远不可能的-（笑）" class="headerlink" title="好多天没更新了，这次很有可能是最后一次内容更新了，因为太少亚托莉的美图了，什么？涩涩？不可能的，永远不可能的 （笑）"></a>好多天没更新了，这次很有可能是最后一次内容更新了，因为太少亚托莉的美图了，什么？涩涩？不可能的，永远不可能的 （笑）</h2><hr>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>atriの画廊2</title>
       <link href="/2024/05/22/7/"/>
       <url>/2024/05/22/7/</url>
@@ -110,17 +123,6 @@
     
     <entry>
       <title></title>
-      <link href="/js/cursor.js"/>
-      <url>/js/cursor.js</url>
-      
-        <content type="html"><![CDATA[var CURSOR;Math.lerp = (a, b, n) => (1 - n) * a + n * b;const getStyle = (el, attr) => {    try {        return window.getComputedStyle            ? window.getComputedStyle(el)[attr]            : el.currentStyle[attr];    } catch (e) {}    return "";};class Cursor {    constructor() {        this.pos = {curr: null, prev: null};        this.pt = [];        this.create();        this.init();        this.render();    }    move(left, top) {        this.cursor.style["left"] = `${left}px`;        this.cursor.style["top"] = `${top}px`;    }    create() {        if (!this.cursor) {            this.cursor = document.createElement("div");            this.cursor.id = "cursor";            this.cursor.classList.add("hidden");            document.body.append(this.cursor);        }        var el = document.getElementsByTagName('*');        for (let i = 0; i < el.length; i++)            if (getStyle(el[i], "cursor") == "pointer")                this.pt.push(el[i].outerHTML);        document.body.appendChild((this.scr = document.createElement("style")));        // 这里改变鼠标指针的颜色 由svg生成        this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='rgb(57, 197, 187)'/></svg>") 4 4, auto}`;    }    refresh() {        this.scr.remove();        this.cursor.classList.remove("hover");        this.cursor.classList.remove("active");        this.pos = {curr: null, prev: null};        this.pt = [];        this.create();        this.init();        this.render();    }    init() {        document.onmouseover  = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.add("hover");        document.onmouseout   = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.remove("hover");        document.onmousemove  = e => {(this.pos.curr == null) && this.move(e.clientX - 8, e.clientY - 8); this.pos.curr = {x: e.clientX - 8, y: e.clientY - 8}; this.cursor.classList.remove("hidden");};        document.onmouseenter = e => this.cursor.classList.remove("hidden");        document.onmouseleave = e => this.cursor.classList.add("hidden");        document.onmousedown  = e => this.cursor.classList.add("active");        document.onmouseup    = e => this.cursor.classList.remove("active");    }    render() {        if (this.pos.prev) {            this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);            this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);            this.move(this.pos.prev.x, this.pos.prev.y);        } else {            this.pos.prev = this.pos.curr;        }        requestAnimationFrame(() => this.render());    }}(() => {    CURSOR = new Cursor();    // 需要重新获取列表时，使用 CURSOR.refresh()})();]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
       
@@ -142,11 +144,11 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/js/cursor.js"/>
+      <url>/js/cursor.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[var CURSOR;Math.lerp = (a, b, n) => (1 - n) * a + n * b;const getStyle = (el, attr) => {    try {        return window.getComputedStyle            ? window.getComputedStyle(el)[attr]            : el.currentStyle[attr];    } catch (e) {}    return "";};class Cursor {    constructor() {        this.pos = {curr: null, prev: null};        this.pt = [];        this.create();        this.init();        this.render();    }    move(left, top) {        this.cursor.style["left"] = `${left}px`;        this.cursor.style["top"] = `${top}px`;    }    create() {        if (!this.cursor) {            this.cursor = document.createElement("div");            this.cursor.id = "cursor";            this.cursor.classList.add("hidden");            document.body.append(this.cursor);        }        var el = document.getElementsByTagName('*');        for (let i = 0; i < el.length; i++)            if (getStyle(el[i], "cursor") == "pointer")                this.pt.push(el[i].outerHTML);        document.body.appendChild((this.scr = document.createElement("style")));        // 这里改变鼠标指针的颜色 由svg生成        this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='rgb(57, 197, 187)'/></svg>") 4 4, auto}`;    }    refresh() {        this.scr.remove();        this.cursor.classList.remove("hover");        this.cursor.classList.remove("active");        this.pos = {curr: null, prev: null};        this.pt = [];        this.create();        this.init();        this.render();    }    init() {        document.onmouseover  = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.add("hover");        document.onmouseout   = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.remove("hover");        document.onmousemove  = e => {(this.pos.curr == null) && this.move(e.clientX - 8, e.clientY - 8); this.pos.curr = {x: e.clientX - 8, y: e.clientY - 8}; this.cursor.classList.remove("hidden");};        document.onmouseenter = e => this.cursor.classList.remove("hidden");        document.onmouseleave = e => this.cursor.classList.add("hidden");        document.onmousedown  = e => this.cursor.classList.add("active");        document.onmouseup    = e => this.cursor.classList.remove("active");    }    render() {        if (this.pos.prev) {            this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);            this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);            this.move(this.pos.prev.x, this.pos.prev.y);        } else {            this.pos.prev = this.pos.curr;        }        requestAnimationFrame(() => this.render());    }}(() => {    CURSOR = new Cursor();    // 需要重新获取列表时，使用 CURSOR.refresh()})();]]></content>
       
     </entry>
     
@@ -158,6 +160,17 @@
       <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[<p><img src="https://img01.vgtime.com/game/cover/2022/09/24/220924125617879_u524.jpg" alt=""></p><h2 id="由Front-Wing和枕社联合制作的视觉小说《ATRI-My-Dear-Moments-亚托莉-我挚爱的时光-》宣布TV动画化决定！将于2024年夏季播出！"><a href="#由Front-Wing和枕社联合制作的视觉小说《ATRI-My-Dear-Moments-亚托莉-我挚爱的时光-》宣布TV动画化决定！将于2024年夏季播出！" class="headerlink" title="由Front Wing和枕社联合制作的视觉小说《ATRI -My Dear Moments-(亚托莉 -我挚爱的时光-)》宣布TV动画化决定！将于2024年夏季播出！"></a>由Front Wing和枕社联合制作的视觉小说《ATRI -My Dear Moments-(亚托莉 -我挚爱的时光-)》宣布TV动画化决定！将于2024年夏季播出！</h2><p><img src="https://img01.vgtime.com/game/cover/2022/09/24/220924125626853_u524.jpg" alt=""><br><img src="https://img01.vgtime.com/game/cover/2022/09/24/220924125640498_u524.jpg" alt=""></p><h2 id="Aniplex-于-2019-年推出的新游戏品牌“ANIPLEX-EXE”作为软件“ATRI-My-Dear-Moments-”的第一款游戏发布！"><a href="#Aniplex-于-2019-年推出的新游戏品牌“ANIPLEX-EXE”作为软件“ATRI-My-Dear-Moments-”的第一款游戏发布！" class="headerlink" title="Aniplex 于 2019 年推出的新游戏品牌“ANIPLEX.EXE”作为软件“ATRI -My Dear Moments-”的第一款游戏发布！"></a>Aniplex 于 2019 年推出的新游戏品牌“ANIPLEX.EXE”作为软件“ATRI -My Dear Moments-”的第一款游戏发布！</h2><h1 id="用清新笔触勾勒出的动人故事，享誉全球，即便是现在，在下载量超过30万次后，这部在日本和海外用户数量不断增加的作品，也将在2024年被拍成电视动画！《Soon-I-Will-Be-You》的导演加藤诚（Makoto-Kato）因其充满情感的导演和剧本而广受好评，×编剧花田淳树（Juki-Hanada）再次联手拍摄了一部关于一个夏天的电影，其中有一个内心孤独的男孩遇到了一个机器人女孩。动画制作由TROYCA负责，TROYCA以精美的视觉表达而闻名。"><a href="#用清新笔触勾勒出的动人故事，享誉全球，即便是现在，在下载量超过30万次后，这部在日本和海外用户数量不断增加的作品，也将在2024年被拍成电视动画！《Soon-I-Will-Be-You》的导演加藤诚（Makoto-Kato）因其充满情感的导演和剧本而广受好评，×编剧花田淳树（Juki-Hanada）再次联手拍摄了一部关于一个夏天的电影，其中有一个内心孤独的男孩遇到了一个机器人女孩。动画制作由TROYCA负责，TROYCA以精美的视觉表达而闻名。" class="headerlink" title="用清新笔触勾勒出的动人故事，享誉全球，即便是现在，在下载量超过30万次后，这部在日本和海外用户数量不断增加的作品，也将在2024年被拍成电视动画！《Soon I Will Be You》的导演加藤诚（Makoto Kato）因其充满情感的导演和剧本而广受好评，×编剧花田淳树（Juki Hanada）再次联手拍摄了一部关于一个夏天的电影，其中有一个内心孤独的男孩遇到了一个机器人女孩。动画制作由TROYCA负责，TROYCA以精美的视觉表达而闻名。"></a>用清新笔触勾勒出的动人故事，享誉全球，即便是现在，在下载量超过30万次后，这部在日本和海外用户数量不断增加的作品，也将在2024年被拍成电视动画！《Soon I Will Be You》的导演加藤诚（Makoto Kato）因其充满情感的导演和剧本而广受好评，×编剧花田淳树（Juki Hanada）再次联手拍摄了一部关于一个夏天的电影，其中有一个内心孤独的男孩遇到了一个机器人女孩。动画制作由TROYCA负责，TROYCA以精美的视觉表达而闻名。</h1><h1 id="在一个被染成蓝色的衰落世界中，一个男孩和一个机器人女孩之间的“心”交换编织了一个动人的故事。"><a href="#在一个被染成蓝色的衰落世界中，一个男孩和一个机器人女孩之间的“心”交换编织了一个动人的故事。" class="headerlink" title="在一个被染成蓝色的衰落世界中，一个男孩和一个机器人女孩之间的“心”交换编织了一个动人的故事。"></a>在一个被染成蓝色的衰落世界中，一个男孩和一个机器人女孩之间的“心”交换编织了一个动人的故事。</h1><h1 id="在不久的将来，由于无法解释的海平面上升，地球表面的大部分都被淹没在海中。斑鸠夏生，一个小时候在一次事故中失去一条腿的小男孩，放弃了在城市的生活，搬到了海边的一个乡村小镇。"><a href="#在不久的将来，由于无法解释的海平面上升，地球表面的大部分都被淹没在海中。斑鸠夏生，一个小时候在一次事故中失去一条腿的小男孩，放弃了在城市的生活，搬到了海边的一个乡村小镇。" class="headerlink" title="在不久的将来，由于无法解释的海平面上升，地球表面的大部分都被淹没在海中。斑鸠夏生，一个小时候在一次事故中失去一条腿的小男孩，放弃了在城市的生活，搬到了海边的一个乡村小镇。"></a>在不久的将来，由于无法解释的海平面上升，地球表面的大部分都被淹没在海中。斑鸠夏生，一个小时候在一次事故中失去一条腿的小男孩，放弃了在城市的生活，搬到了海边的一个乡村小镇。</h1><h1 id="他的祖母是一名海洋地质学家，在船上、潜水器和债务上留下了一无所有。-为了找回“失去的未来”，夏生潜入海底的仓库，那里存放着祖母的遗产。在那里，他发现了一个神秘的女孩——亚托莉，她睡在一个类似棺材的装置里。她是一个机器人，如此精致，情感丰富，以至于可能会被误认为是人类。从海底打捞上来的亚托莉说。"><a href="#他的祖母是一名海洋地质学家，在船上、潜水器和债务上留下了一无所有。-为了找回“失去的未来”，夏生潜入海底的仓库，那里存放着祖母的遗产。在那里，他发现了一个神秘的女孩——亚托莉，她睡在一个类似棺材的装置里。她是一个机器人，如此精致，情感丰富，以至于可能会被误认为是人类。从海底打捞上来的亚托莉说。" class="headerlink" title="他的祖母是一名海洋地质学家，在船上、潜水器和债务上留下了一无所有。 为了找回“失去的未来”，夏生潜入海底的仓库，那里存放着祖母的遗产。在那里，他发现了一个神秘的女孩——亚托莉，她睡在一个类似棺材的装置里。她是一个机器人，如此精致，情感丰富，以至于可能会被误认为是人类。从海底打捞上来的亚托莉说。"></a>他的祖母是一名海洋地质学家，在船上、潜水器和债务上留下了一无所有。 为了找回“失去的未来”，夏生潜入海底的仓库，那里存放着祖母的遗产。在那里，他发现了一个神秘的女孩——亚托莉，她睡在一个类似棺材的装置里。她是一个机器人，如此精致，情感丰富，以至于可能会被误认为是人类。从海底打捞上来的亚托莉说。</h1><h1 id="“我想完成主人留下的最后一个任务。-在那之前，我将成为夏生的腿！”"><a href="#“我想完成主人留下的最后一个任务。-在那之前，我将成为夏生的腿！”" class="headerlink" title="“我想完成主人留下的最后一个任务。 在那之前，我将成为夏生的腿！”"></a>“我想完成主人留下的最后一个任务。 在那之前，我将成为夏生的腿！”</h1><h1 id="在一个沉入大海的宁静小镇，一个男孩和一个机器人女孩之间难忘的夏天开始了。"><a href="#在一个沉入大海的宁静小镇，一个男孩和一个机器人女孩之间难忘的夏天开始了。" class="headerlink" title="在一个沉入大海的宁静小镇，一个男孩和一个机器人女孩之间难忘的夏天开始了。"></a>在一个沉入大海的宁静小镇，一个男孩和一个机器人女孩之间难忘的夏天开始了。</h1><h2 id="https-youtu-be-VEmgf-1pWW0"><a href="#https-youtu-be-VEmgf-1pWW0" class="headerlink" title="https://youtu.be/VEmgf_1pWW0"></a><a href="https://youtu.be/VEmgf_1pWW0">https://youtu.be/VEmgf_1pWW0</a></h2><h2 id="https-youtu-be-Q-fpe-0imFw"><a href="#https-youtu-be-Q-fpe-0imFw" class="headerlink" title="https://youtu.be/Q-fpe_0imFw"></a><a href="https://youtu.be/Q-fpe_0imFw">https://youtu.be/Q-fpe_0imFw</a></h2><h2 id="https-youtu-be-zS3NYT-pSps"><a href="#https-youtu-be-zS3NYT-pSps" class="headerlink" title="https://youtu.be/zS3NYT_pSps"></a><a href="https://youtu.be/zS3NYT_pSps">https://youtu.be/zS3NYT_pSps</a></h2><h2 id="咳咳，本人技术力不足，无法做到在文章内插入视频，还请客观去官网观看pv，既然是看pv，我放的pv也是要翻墙去看的，官方的最有感觉嘛"><a href="#咳咳，本人技术力不足，无法做到在文章内插入视频，还请客观去官网观看pv，既然是看pv，我放的pv也是要翻墙去看的，官方的最有感觉嘛" class="headerlink" title="咳咳，本人技术力不足，无法做到在文章内插入视频，还请客观去官网观看pv，既然是看pv，我放的pv也是要翻墙去看的，官方的最有感觉嘛"></a>咳咳，本人技术力不足，无法做到在文章内插入视频，还请客观去官网观看pv，既然是看pv，我放的pv也是要翻墙去看的，官方的最有感觉嘛</h2><hr>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
